@@ -7,7 +7,7 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    set<int> s;
+    multiset<int> s;
     for (int i = 0; i < n; i++) {
         int num;
         cin >> num;
@@ -22,9 +22,8 @@ int main() {
             case 1: {
                 int a;
                 cin >> a;
-                for (int el:s) {
-                    if (el == a) {
-                        cout << s.count(el) << endl;
+               if(s.count(a)>0) {
+                        cout << s.count(a) << endl;
                         break;
                     }
                 }
@@ -32,8 +31,7 @@ int main() {
             case 2: {
                 int b, a;
                 cin >> b >> a;
-                for (int el:s) {
-                    if (el == a) {
+                if(s.count(a)>0) {
                         s.erase(a);
                         s.insert(b);
 
