@@ -1,0 +1,43 @@
+\documentclass[10pt, a4paper]{article}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\setlength{\parskip}{1ex}
+
+\begin{document}
+	{\fontfamily{LinuxLibertineT-TLF}\selectfont
+		\noindent\LARGE\textbf{Словарь}\\\\
+		\normalsize
+		\begin{tabular}{ll}
+			\indent Имя входного файла: & standart input\\
+			\indent Имя выходного файла: & standart output\\
+		\end{tabular}
+		
+		\noindent Ваша задача реалиовать простой словарь. Со словарем можо выполнять две операции. Добавлять список слов в словарь и вывести количество слов и все слова начинающиеся на некоторые буквы. 
+		
+		\noindent\large\textbf{Формат входного файла}\\
+		\normalsize В первой строчке вводятся целые положительные числа $n$ и $m$, количество слов словаря изначально, и количество запросов. В следующей строке вводится $n$ слов. В следующих $m$ строках вводится описание запросов в формате 
+		\begin{enumerate}
+				\item 1 $k$ $a_1, a_2, a_3, \dots, a_k$ - добавить $k$ слов в словарь, $a_1, a_2, a_3, \dots, a_k$ - слова, которые надо добавить
+				\item 2 $k$ $a_1, a_2, a_3, \dots, a_k$ - вывести количество слов и все слова, начинающиеся на буквы $a_1, a_2, a_3, \dots, a_k$
+		\end{enumerate}
+		
+		\noindent\large\textbf{Формат выходного файла}\\\normalsize На каждый запрос второго типа выведите в первой строке количество всех слов. Затем, начиная со второй строки, выведите все слова через пробел в любом порядке. 
+		
+		\noindent\large\textbf{Пример}\normalsize
+		
+		\noindent\begin{tabular}{|p{5,5cm}|p{5,5cm}|}
+			\hline
+			\multicolumn{1}{|c|}{standart input} & \multicolumn{1}{c|}{standart output}\\\hline
+			8 3 & 4 \\
+			Alina foxy burn vector cool book is & Alina is cool foxy  \\
+			guitar & 4 \\
+			2 4 a i c f & Alina is little evil\\
+			1 2 evil little & \\
+			2 4 a i l e & \\
+			& \\\hline
+		\end{tabular}
+		
+	}
+	
+\end{document}
