@@ -1,20 +1,17 @@
 #include <iostream>
 #include<set>
-#include<vector>
 
 using namespace std;
 
 int main() {
-    int n;
-    cin >> n;
+    int n, m;
+    cin >> n >> m >> endl;
     multiset<int> s;
     for (int i = 0; i < n; i++) {
         int num;
         cin >> num;
         s.insert(num);
     }
-    int m;
-    cin >> m;
     for (int i = 0; i < m; i++) {
         int query;
         cin >> query;
@@ -22,27 +19,27 @@ int main() {
             case 1: {
                 int a;
                 cin >> a;
-               if(s.count(a)>0) {
-                        cout << s.count(a) << endl;
-                        break;
-                    }
+                if (s.count(a) > 0) {
+                    cout << s.count(a) << endl;
+                    break;
                 }
             }
-            case 2: {
-                int b, a;
-                cin >> b >> a;
-                if(s.count(a)>0) {
-                        s.erase(a);
-                        s.insert(b);
-
-                    }
-                }
+        }
+        case 2: {
+            int b, a;
+            cin >> b >> a;
+            if (s.count(a) > 0) {
+                s.erase(a);
+                s.insert(b);
 
             }
         }
 
-
-        return 0;
-
     }
+}
+
+
+return 0;
+
+}
 }
