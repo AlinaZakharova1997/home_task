@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     int n, m;
-    cin >> n >> m >> endl;
+    cin >> n >> m;
     multiset<int> s;
     for (int i = 0; i < n; i++) {
         int num;
@@ -21,25 +21,29 @@ int main() {
                 cin >> a;
                 if (s.count(a) > 0) {
                     cout << s.count(a) << endl;
-                    break;
+                } else {
+                    cout << 0 << endl;
                 }
+                break;
             }
-        }
-        case 2: {
-            int b, a;
-            cin >> b >> a;
-            if (s.count(a) > 0) {
+
+            case 2: {
+                int a, b;
+                cin >> a >> b;
+                for (int c = 0; c < s.count(a); c++) {
+                    s.insert(b);
+                }
                 s.erase(a);
-                s.insert(b);
 
             }
+            default:
+                break;
         }
 
     }
+    return 0;
 }
 
 
-return 0;
 
-}
-}
+

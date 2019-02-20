@@ -1,3 +1,3 @@
-/home/vadim/Projects/home_tasks/hw3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vadim/Projects/home_tasks/hw3/cmake-build-debug/CMakeFiles/hw3.dir
-/home/vadim/Projects/home_tasks/hw3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alina/home_tasks/hw3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alina/home_tasks/hw3/cmake-build-debug/CMakeFiles/hw3.dir
+/home/alina/home_tasks/hw3/cmake-build-debug/CMakeFiles/edit_cache.dir
