@@ -12,43 +12,48 @@ int main() {
     for (int i = 0; i < n; i++) {
         string word;
         cin >> word;
-        AlinaDict.push_back(word);
-        for (int j = 0; j < m; j++) {
-            int query;
-            cin >> query;
-            switch (query) {
-                case 1: {
-                    int word_num;
-                    cin >> word_num;
-                    while (word_num > 0) {
-                        string w;
-                        cin >> w;
-                        AlinaDict.push_back(w);
-                        word_num--;
-                        break;
-                    }
-
-                }
-                case 2: {
-                    int word_num;
-                    cin >> word_num;
-                    while (word_num > 0) {
-                        for (int x = 0; x < AlinaDict.size(); x++) {
-                            char letter;
-                            cin >> letter;
-                            cout << word_num << endl;
-                            if (AlinaDict[x].rfind(letter, 0)) {
-                                cout << AlinaDict[x] << endl;
-                            }
-                        }
-
-                    }
-
-
-                }
-            }
-
-        }
-        return 0;
+        AlinaDict.push_back(word);    //заполняю вектор словами, слов n штук
     }
+    for (int j = 0; j < m; j++) {
+        int query;
+        cin >> query;
+        switch (query) {
+            case 1: {
+                int word_num;
+                cin >> word_num;
+                for (int i = 0; i < word_num; i++) {
+                    string w;
+                    cin >> w;
+                    AlinaDict.push_back(w);
+
+                }
+
+                break;
+            }
+            case 2: {
+                int word_num;
+                cin >> word_num;
+                int word_count = 0;
+                for (int i = 0; i < word_num; i++) {
+                    for (auto &x : AlinaDict) {
+                        word_count+=1;
+                        char letter;
+                        cin >> letter;
+                        cout << word_count << endl;
+                        if (x.rfind(letter, 0)) {
+                            cout << x << endl;
+                        }
+                    }
+
+                }
+
+
+            }
+            default:
+                break;
+        }
+
+    }
+    return 0;
+
 }
